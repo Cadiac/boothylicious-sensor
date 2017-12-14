@@ -63,6 +63,7 @@ defmodule BoothyliciousSensor.Mixfile do
       {:nerves_runtime, "~> 0.4"},
       {:nerves_network, "~> 0.3"},
       {:elixir_ale, "~> 1.0"},
+      {:httpoison, "~> 0.13"}
     ] ++ system(target)
   end
 
