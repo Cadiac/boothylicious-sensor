@@ -37,7 +37,7 @@ defmodule BoothyliciousSensor.Mixfile do
     [extra_applications: [:logger]]
   end
   def application(_target) do
-    [mod: {BoothyliciousSensor.Application, []},
+    [mod: {BoothyliciousSensor, []},
      extra_applications: [:logger]]
   end
 
@@ -60,7 +60,9 @@ defmodule BoothyliciousSensor.Mixfile do
   def deps(target) do
     [
       {:bootloader, "~> 0.1"},
-      {:nerves_runtime, "~> 0.4"}
+      {:nerves_runtime, "~> 0.4"},
+      {:nerves_network, "~> 0.3"},
+      {:elixir_ale, "~> 1.0"},
     ] ++ system(target)
   end
 
